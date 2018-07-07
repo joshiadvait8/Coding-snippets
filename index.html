@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+    
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+   
+    
+    
+
+    <title>Coding Website</title>
+  </head>
+  <body>
+    <header class="text-center text-white d-flex">
+      <div class="container my-auto"  >
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1><strong>Learn To code with Basic Examples</strong><h1>
+            <hr>
+          </div>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded">Here are some examples so that you can boost your confidence in coding
+            and will able to build algorithms that spreads colors in your life.
+          </p>     
+          <a class="btn btn-primary btn-lg" href="#examples">Start Learning</a>
+        </div>
+      </div>
+
+    </header>
+
+  <!-- Examples Grid -->
+    <section id="examples">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Examples</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-auto col-sm-auto">
+          <a data-toggle="modal" href="#fibo-modal">
+            <div class="card text-white bg-primary mb-3">
+              
+                  <div class="card-body cb">
+                    <h3 class="card-title ex">Fibonacci</h3>
+                    
+                  </div>
+          
+          </a>
+          </div>
+        </div>
+        <div class="col-md-auto col-sm-auto">
+          <a data-toggle="modal" href="#Pallindrome-modal">
+            <div class="card text-white bg-primary mb-3">
+              
+                  <div class="card-body cb">
+                    <h3 class="card-title ex">Pallindrome</h3>
+                  </div>
+                </div>
+          </a>
+        </div>
+          <div class="col-md-auto col-sm-auto">
+          <a data-toggle="modal" href="#fact-modal">
+            <div class="card text-white bg-primary mb-3">
+              
+                  <div class="card-body cb">
+                    <h3 class="card-title ex">Factorial</h3>
+                  </div>
+                </div>
+          </a>
+        </div>
+          <div class="col-md-auto col-sm-auto">
+          <a data-toggle="modal" href="#bub-modal">
+            <div class="card text-white bg-primary mb-3">
+              
+                  <div class="card-body cb">
+                    <h3 class="card-title ex">Buble Sort</h3>
+                  </div>
+                </div>
+          </a>
+        </div>
+          <div class="col-md-auto col-sm-auto">
+          <a data-toggle="modal" href="#tl-modal">
+            <div class="card text-white bg-primary mb-3">
+              
+                  <div class="card-body cb">
+                    <h3 class="card-title ex">Third Largest in Arrays</h3>
+                  </div>
+                </div>
+          </a>
+        </div>
+        </div>
+      </div>
+      </div>
+      
+    
+  
+    <!-- Modal fibo -->
+    <div id="fibo-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-aj">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title">Fibonacci Series</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <p>The Fibonacci numbers are the numbers in the following integer sequence. <br>
+                0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …….<br>
+              In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrene relation
+              <p>
+            </div>
+            <div class="container">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link active" title="java"" id="java-tab" data-toggle="tab" href="#java" role="tab" aria-controls="java" aria-selected="true">Java</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="cpp-tab" data-toggle="tab" href="#cpp" role="tab" aria-controls="cpp" aria-selected="false">C++</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane show active" id="java" role="tabpanel" aria-labelledby="java-tab">
+               
+                <pre class="prettyprint"><code>
+             
+             // Java program for Fibonacci Series using Space
+              // Optimized Method
+              class fibonacci
+              {
+                  static int fib(int n)
+                  {
+                      int a = 0, b = 1, c;
+                      if (n == 0)
+                          return a;
+                      for (int i = 2; i <= n; i++)
+                      {
+                          c = a + b;
+                          a = b;
+                          b = c;
+                      }
+                      return b;
+                  }
+               
+                  public static void main (String args[])
+                  {
+                      int n = 9;
+                      System.out.println(fib(n));
+                  }
+              }
+            </code></pre>
+              </div>
+              <div class="tab-pane" id="cpp" role="tabpanel" aria-labelledby="cpp-tab">
+                <pre class="prettyprint"><code>
+                    // Fibonacci Series using Space Optimized Method
+                #include &ltstdio.h&gt
+                int fib(int n)
+                {
+                  int a = 0, b = 1, c, i;
+                  if( n == 0)
+                    return a;
+                  for (i = 2; i <= n; i++)
+                  {
+                     c = a + b;
+                     a = b;
+                     b = c;
+                  }
+                  return b;
+                }
+                 
+                int main ()
+                {
+                  int n = 9;
+                  printf("%d", fib(n));
+                  getchar();
+                  return 0;
+                } 
+              </code></pre>
+                
+              
+              </div>
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Palindrome-->
+
+    <div id="Pallindrome-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-aj">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title">Pallindrome Number</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <p>This program takes an integer from user and that integer is reversed.
+
+      If the reversed integer is equal to the integer entered by user then, that number is a palindrome if not that number is not a palindrome.This program takes an integer from user and that integer is reversed.
+
+      If the reversed integer is equal to the integer entered by user then, that number is a palindrome if not that number is not a palindrome.
+              <p>
+            </div>
+            <div class="container">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link active" title="java"" id="java-tab" data-toggle="tab" href="#paljava" role="tab" aria-controls="java" aria-selected="true">Java</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="cpp-tab" data-toggle="tab" href="#palcpp" role="tab" aria-controls="cpp" aria-selected="false">C++</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane show active" id="paljava" role="tabpanel" aria-labelledby="java-tab">
+                java
+                <pre class="prettyprint"><code>
+             
+             class PalindromeExample{  
+              public static void main(String args[]){  
+              int r,sum=0,temp;    
+              int n=454;//It is the number variable to be checked for palindrome  
+  
+              temp=n;    
+              while(n>0){    
+               r=n%10;  //getting remainder  
+               sum=(sum*10)+r;    
+               n=n/10;    
+              }    
+              if(temp==sum)    
+               System.out.println("palindrome number ");    
+              else    
+               System.out.println("not palindrome");    
+            }  
+            }  
+            </code></pre>
+              </div>
+              <div class="tab-pane" id="palcpp" role="tabpanel" aria-labelledby="cpp-tab">
+                <pre class="prettyprint"><code>
+                  #include &ltiostream&gt
+                  using namespace std;
+
+                    int main()
+                    {
+                        int n, num, digit, rev = 0;
+
+                        cout << "Enter a positive number: ";
+                        cin >> num;
+
+                        n = num;
+
+                       do
+                       {
+                           digit = num % 10;
+                           rev = (rev * 10) + digit;
+                           num = num / 10;
+                       } while (num != 0);
+
+                       cout << " The reverse of the number is: " << rev << endl;
+
+                       if (n == rev)
+                           cout << " The number is a palindrome";
+                       else
+                           cout << " The number is not a palindrome";
+
+                      return 0;
+                }
+                                                        
+              </code></pre>
+                
+              
+              </div>
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- factorial modal    -->
+    <div id="fact-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-aj">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title">Factorial of Nummber</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <p>Factorial of n is the product of all positive descending integers. Factorial of n is denoted by n!.
+              <p>
+            </div>
+            <div class="container">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link active" title="java"" id="java-tab" data-toggle="tab" href="#factjava" role="tab" aria-controls="java" aria-selected="true">Java</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="cpp-tab" data-toggle="tab" href="#factcpp" role="tab" aria-controls="cpp" aria-selected="false">C++</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane show active" id="factjava" role="tabpanel" aria-labelledby="java-tab">
+               
+                <pre class="prettyprint"><code>
+                         
+              class FactorialExample{  
+              public static void main(String args[]){  
+              int i,fact=1;  
+              int number=5;//It is the number to calculate factorial    
+              for(i=1;i<=number;i++){    
+                  fact=fact*i;    
+              }    
+              System.out.println("Factorial of "+number+" is: "+fact);    
+              }  
+              }  
+            </code></pre>
+              </div>
+              <div class="tab-pane" id="factcpp" role="tabpanel" aria-labelledby="cpp-tab">
+                <pre class="prettyprint"><code>
+                    #include &ltiostream&gt
+                    using namespace std;
+
+                    int main()
+                    {
+                        unsigned int n;
+                        unsigned long long factorial = 1;
+
+                        cout << "Enter a positive integer: ";
+                        cin >> n;
+
+                        for(int i = 1; i <=n; ++i)
+                        {
+                            factorial *= i;
+                        }
+
+                        cout << "Factorial of " << n << " = " << factorial;    
+                        return 0;
+                    }
+              </code></pre>
+                
+              
+              </div>
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bubble sort modal -->
+    <div id="bub-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-aj">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title">Bubble Sort</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <p>In bubble sort algorithm, array is traversed from first element to last element. Here, current element is compared with the next element. If current element is greater than the next element, it is swapped.
+              <p>
+            </div>
+            <div class="container">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link active" title="java"" id="java-tab" data-toggle="tab" href="#bubjava" role="tab" aria-controls="java" aria-selected="true">Java</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="cpp-tab" data-toggle="tab" href="#bubcpp" role="tab" aria-controls="cpp" aria-selected="false">C++</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane show active" id="bubjava" role="tabpanel" aria-labelledby="java-tab">
+               
+                <pre class="prettyprint"><code>
+             
+                 public class BubbleSortExample {  
+                  static void bubbleSort(int[] arr) {  
+                      int n = arr.length;  
+                      int temp = 0;  
+                       for(int i=0; i < n; i++){  
+                               for(int j=1; j < (n-i); j++){  
+                                        if(arr[j-1] > arr[j]){  
+                                               //swap elements  
+                                               temp = arr[j-1];  
+                                               arr[j-1] = arr[j];  
+                                               arr[j] = temp;  
+                                       }  
+                                        
+                               }  
+                       }  
+                
+                  }  
+                  public static void main(String[] args) {  
+                              int arr[] ={3,60,35,2,45,320,5};  
+                               
+                              System.out.println("Array Before Bubble Sort");  
+                              for(int i=0; i < arr.length; i++){  
+                                      System.out.print(arr[i] + " ");  
+                              }  
+                              System.out.println();  
+                                
+                              bubbleSort(arr);//sorting array elements using bubble sort  
+                               
+                              System.out.println("Array After Bubble Sort");  
+                              for(int i=0; i < arr.length; i++){  
+                                      System.out.print(arr[i] + " ");  
+                              }  
+                 
+                      }  
+              }  
+            </code></pre>
+              </div>
+              <div class="tab-pane" id="bubcpp" role="tabpanel" aria-labelledby="cpp-tab">
+                <pre class="prettyprint"><code>
+              // C program for implementation of Bubble sort
+              #include &ltstdio..h&gt
+               
+              void swap(int *xp, int *yp)
+              {
+                  int temp = *xp;
+                  *xp = *yp;
+                  *yp = temp;
+              }
+               
+              // A function to implement bubble sort
+              void bubbleSort(int arr[], int n)
+              {
+                 int i, j;
+                 for (i = 0; i < n-1; i++)      
+               
+                     // Last i elements are already in place   
+                     for (j = 0; j < n-i-1; j++) 
+                         if (arr[j] > arr[j+1])
+                            swap(&arr[j], &arr[j+1]);
+              }
+               
+              /* Function to print an array */
+              void printArray(int arr[], int size)
+              {
+                  int i;
+                  for (i=0; i < size; i++)
+                      printf("%d ", arr[i]);
+                  printf("n");
+              }
+               
+              // Driver program to test above functions
+              int main()
+              {
+                  int arr[] = {64, 34, 25, 12, 22, 11, 90};
+                  int n = sizeof(arr)/sizeof(arr[0]);
+                  bubbleSort(arr, n);
+                  printf("Sorted array: \n");
+                  printArray(arr, n);
+                  return 0;
+              }
+              </code></pre>
+                
+              
+              </div>
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third largest in array -->
+    <div id="tl-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-aj">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title">Third Largest in Array</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <p>Third largest in array we first of all sort the array then return size-3 th element.
+              <p>
+            </div>
+            <div class="container">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link active" title="java"" id="java-tab" data-toggle="tab" href="#tljava" role="tab" aria-controls="java" aria-selected="true">Java</a>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="cpp-tab" data-toggle="tab" href="#tlcpp" role="tab" aria-controls="cpp" aria-selected="false">C++</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane show active" id="tljava" role="tabpanel" aria-labelledby="java-tab">
+               
+                <pre class="prettyprint"><code>
+             
+              public class ThirdLargestInArrayExample{  
+              public static int getThirdLargest(int[] a, int total){  
+              int temp;  
+              for (int i = 0; i < total; i++)   
+                      {  
+                          for (int j = i + 1; j < total; j++)   
+                          {  
+                              if (a[i] > a[j])   
+                              {  
+                                  temp = a[i];  
+                                  a[i] = a[j];  
+                                  a[j] = temp;  
+                              }  
+                          }  
+                      }  
+                     return a[total-3];  
+              }  
+              public static void main(String args[]){  
+              int a[]={1,2,5,6,3,2};  
+              int b[]={44,66,99,77,33,22,55};  
+              System.out.println("Third Largest: "+getThirdLargest(a,6));  
+              System.out.println("Third Largest: "+getThirdLargest(b,7));  
+              }}  
+            </code></pre>
+              </div>
+              <div class="tab-pane" id="tlcpp" role="tabpanel" aria-labelledby="cpp-tab">
+                <pre class="prettyprint"><code>
+                 // C program to find third Largest element in an array
+                // of distinct elements
+                #include &ltbits/stdc++.h&gt
+                 
+                void thirdLargest(int arr[], int arr_size)
+                {
+                    /* There should be atleast three elements */
+                    if (arr_size < 3)
+                    {
+                        printf(" Invalid Input ");
+                        return;
+                    }
+                 
+                    // Find first largest element
+                    int first = arr[0];
+                    for (int i = 1; i < arr_size ; i++)
+                        if (arr[i] > first)
+                            first = arr[i];
+                 
+                    // Find second largest element
+                    int second = INT_MIN;
+                    for (int i = 0; i < arr_size ; i++)
+                        if (arr[i] > second && arr[i] < first)
+                            second = arr[i];
+                 
+                    // Find third largest element
+                    int third = INT_MIN;
+                    for (int i = 0; i < arr_size ; i++)
+                        if (arr[i] > third && arr[i] < second)
+                            third = arr[i];
+                 
+                    printf("The third Largest element is %d\n", third);
+                }
+                 
+                /* Driver program to test above function */
+                int main()
+                {
+                    int arr[] = {12, 13, 1, 10, 34, 16};
+                    int n = sizeof(arr)/sizeof(arr[0]);
+                    thirdLargest(arr, n);
+                    return 0;
+                }
+              </code></pre>
+                
+              
+              </div>
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </section>
+
+     
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="prism.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    
+
+
+  </body>
+</html> 
